@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQUERY</title>
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script>
+    $(document).ready(function(){
+        $("#bConsultar").click(function(){
+            var selector="";
+            $(".r").css("opacity","0.5");
+            $("input:checked").each(function(){
+                selector+="."+this.id;
+            });
+            $(selector).css("opacity","1");
+        });
+    });
+    
+    </script>
+</head>
+<body>
+    <div>
+        <input type="checkbox" id="doble">Doble
+        <input type="checkbox" id="perro">Perro
+        <input type="checkbox" id="fumar">Fumar
+        <input type="checkbox" id="suite">Suite
+        <input type="button" value="Consultar" id="bConsultar">
+    </div>
+    <div class="r doble perro fumar">
+            <img src="images/r1.jpg" alt="" width="100px" id="r1" class="room">
+    </div>
+    <div class="r perro">
+            <img src="images/r2.jpg" alt="" width="100px" id="r2" class="room">
+    </div>    
+    <div class="r doble perro">
+            <img src="images/r3.jpg" alt="" width="100px" id="r3" class="room">    
+    </div>    
+    <div class="r perro fumar suite">
+            <img src="images/r4.jpg" alt="" width="100px" id="r4" class="room">
+    </div>    
+    <div class="r doble">
+            <img src="images/r5.jpg" alt="" width="100px" id="r5" class="room">
+    </div>    
+    <div class="r fumar suite">
+            <img src="images/r6.jpg" alt="" width="100px" id="r6" class="room">
+    </div>
+</body>
+</html>

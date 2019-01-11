@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+}
+
+body{
+    
+}
+
+.clase1{
+    height: 200px;
+    background-color: rgb(220, 194, 245);
+}
+.clase2{
+    height: 250px;
+    background-color: rgb(209, 246, 171);
+}
